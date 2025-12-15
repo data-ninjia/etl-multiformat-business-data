@@ -1,18 +1,34 @@
-# ETL Sales Pipeline Postgres
-ETL pipeline that extracts CSV sales data, validates and cleans it, and loads it into PostgreSQL using Python.
+# Multi-format Business ETL Pipeline
 
-Tech Stack:
-- Python (pandas)
+## Overview
+This project implements a production-like ETL pipeline that processes
+business data from multiple source formats (CSV, JSON, XML, Parquet)
+and loads normalized data into PostgreSQL.
+
+## Business Context
+The pipeline simulates an e-commerce analytics system where data
+comes from different upstream systems and file formats.
+
+## Data Sources
+- Orders: CSV
+- Customers: JSON
+- Suppliers: XML
+- Events: Parquet
+
+## Architecture
+Source Files → Extract → Transform → Validation → Staging → Core Tables
+
+## Tech Stack
+- Python (pandas, pyarrow)
 - PostgreSQL
-- Docker
-- logging
+- Docker / Docker Compose
 
-Functionality:
-1. Extract: CSV / mock data
-2. Transform:
-- schema validation
-- missing values
-- type casting
-3. Load:
-- staging → final tables
-- basic data quality checks
+## Data Quality Checks
+- Schema validation
+- Null checks
+- Referential integrity
+- Duplicate detection
+
+## How to Run
+```bash
+docker-compose up --build
