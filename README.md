@@ -4,8 +4,6 @@
 This project demonstrates a simple ETL pipeline that processes business data from multiple source formats and loads it into a PostgreSQL database.  
 The goal of the project is to simulate a realistic data engineering task: ingest heterogeneous data, validate it, apply basic transformations, and store it in a structured form for further analytics.
 
-This repository is intended as a learning and portfolio project for a Trainee / Junior Data Engineer role.
-
 ---
 
 ## Business Context
